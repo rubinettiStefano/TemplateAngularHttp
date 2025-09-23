@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<script>
+
+    // function nomeFunzione(par1,par2)
+    // {
+    //   //codice
+    // }
+    //
+    // nomeFunzione(10,20);
+    //
+    // let nomeVariabile = function (par1,par2)
+    // {
+    //   //codice
+    // }
+    //
+    // nomeVariabile(10,20);
+    //
+    // let nomeVariabile2 = (par1,par2) =>
+    // {
+    //   //codice
+    // }
+    //
+    // nomeVariabile2(10,20);
+    //
+    // let nomeVariabile3 = (par1,par2) => console.log(par1);
+    //
+    //
+    // nomeVariabile3(10,20);
+
+
+    let a = (n1,n2)=>{
+      return n1+n2;
+    }
+
+    //callback -> funzione passata come parametro ad un altra per essere
+    //eseguita al suo interno
+    let b = function (n1,n2){
+      return n1(2,3)+n2;
+    }
+
+    function paperino(r1,r2)
+    {
+      return r1*r2;
+    }
+
+    b(paperino,10)
+
+
+</script>
+<body>
+
+</body>
+</html>

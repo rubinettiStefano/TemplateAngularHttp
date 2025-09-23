@@ -1,0 +1,21 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Age</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (p of all;track $index)
+    {
+      <tr>
+        <td>{{p.id}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.surname}}</td>
+        <td>{{p.age}}</td>
+      </tr>
+    }
+  </tbody>
+</table>

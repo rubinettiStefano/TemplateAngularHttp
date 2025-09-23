@@ -1,0 +1,9 @@
+<button (click)="mostraLista=!mostraLista">CAMBIA SCHERMATA</button>
+@if (mostraLista)
+{
+  <app-person-list></app-person-list>
+}
+@else
+{
+  <app-person-form></app-person-form>
+}
