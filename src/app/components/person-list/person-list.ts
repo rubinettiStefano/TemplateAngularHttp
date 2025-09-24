@@ -22,14 +22,29 @@ export class PersonList
     //           <PersonaGet[]> è equivalente al @RequestBody di Spring
     //          converti in JSON in un Array di Oggetti PersonaGet
     this.http.get<PersonaGet[]>("/api/persons")
-      .subscribe //cosa fare dopo che la response arriva, vuole una arrow function, la "lambda" di js
-      (
-        (json) =>
+      .subscribe(
+        (resp)=>
         {
-          console.log(json);
-          this.all=json
+          console.log(resp);
         }
-      );
+      )
+      // .subscribe(this.stampaResponse)
+      // (
+      //   (json) =>
+      //   {
+      //     console.log(json);
+      //   }
+      // );
   }
 
+  // subscribe(funzioneParametro:any)
+  // {
+  //   let resp = ["ciò","che","arriva","da","server"];
+  //   funzioneParametro(resp);
+  // }
+
+  // stampaResponse(response:any)
+  // {
+  //   console.log(response);
+  // }
 }

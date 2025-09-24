@@ -1,0 +1,30 @@
+ v1
+.subscribe(
+    (resp)=>
+    {
+      console.log(resp);
+    }
+);
+
+ v2
+.subscribe(
+    function (resp)
+    {
+      console.log(resp);
+    }
+);
+
+ v3
+.subscribe(this.stampaFisso);
+
+stampa(resp)
+{
+   console.log(resp);
+}
+
+//la richiama stampaFisso(response);
+
+stampaFisso()
+{
+   alert("ciao");
+}

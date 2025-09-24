@@ -24,11 +24,20 @@ export class PersonForm
   {
     this.http.post("/api/persons",this.personaDaInserire)
       .subscribe(
+        //success
         ()=>
         {
           alert("Persona Salvata");
           //svuota la form
           this.personaDaInserire = {n:"",c:"",e:0};
+        },
+        //error
+        (err)=>
+        {
+          //per prendere il messaggio di errore o il tipo nel json
+          let messaggio = err.error.msg;
+          let tipo = err.error.type;
+          alert("Salvataggio fallito perchè "+messaggio);
         }
       );
   }
